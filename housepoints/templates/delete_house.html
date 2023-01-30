@@ -1,0 +1,22 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Delete {{item}}
+{% endblock %}
+
+{% block content %}
+
+  <p>Are you sure you want to delete "{{item}}"?</p>
+
+  <div style="display:flex;">
+
+    <a class="btn-small" href="/houses/update_house/{{ item.id }}">Cancel</a>
+
+    <form action="/houses/delete_house/{{ item.id }}" method="POST">
+      {% csrf_token %}
+      <input class="btn-small" type="submit" name="Confirm">
+    </form>
+
+  </div>
+
+{% endblock %}

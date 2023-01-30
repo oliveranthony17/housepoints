@@ -1,0 +1,93 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Testing
+{% endblock %}
+
+{% block content %}
+
+  {% with message="how are you?" %}
+  {% with greeting=1 %}
+
+    {% if greeting == 1 and name == "Oliver" %}
+      <h1>Hello {{ name }}, {{ message }}</h1>
+    {% elif greeting == 2 %}
+      <h1>Welcome {{name}}</h1>
+    {% else %}
+      <h1>Bye {{ name }}</h1>
+    {% endif %}
+
+  {% endwith %}
+  {% endwith %}
+
+    {% for x in fruits %}
+      <h1>{{ x }}</h1>
+    {% endfor %}
+
+    {% if 'Banana' not in fruits %}
+      <h1>No banana :(</h1>
+    {% else %}
+      <h1>Got banana :)</h1>
+    {% endif %}
+
+    {% if fruits is veg %}
+      <h1>YES</h1>
+    {% else %}
+      <h1>NO</h1>
+    {% endif %}
+
+    {% if fruits == veg %}
+      <h1>YES</h1>
+    {% else %}
+      <h1>NO</h1>
+    {% endif %}
+
+    <ul>
+      {% for x in students %}
+        <li>{{ x.first_name }}</li>
+      {% endfor %}
+    </ul>
+
+    <ul>
+      {% for x in fruits %}
+        <li
+          {% if forloop.first %}
+            style='background-color:lightblue;'
+          {% endif %}
+        >
+          {{ x }}
+        </li>
+      {% endfor %}
+    </ul>
+
+    <ul>
+      {% for x in fruits %}
+        <li>{{ forloop.revcounter }}</li>
+      {% endfor %}
+    </ul>
+
+    {% comment "this was commented out for lols" %}
+      <p>In views.py you can see the fruits variable.</p>
+    {% endcomment %}
+
+{% endblock %}
+
+
+
+<!--
+      {% with students=x.students.all() %}
+
+        {% for y in students %}
+        <p>{{ y.name }}: {{ y.points }}</p>
+
+      {% endwith } -->
+
+      <!-- <p>Students: {{ x.students.all() }}</p> -->
+
+      <!-- Few examples from video... -->
+
+      <!-- >>> House.objects.all().filter(students__first_name__startswith="Draco")
+      <QuerySet [<House: Slytherin>]> -->
+
+      <!-- >>> Student.objects.filter(house__name="Luzern")
+      <QuerySet [<Student: Max Smith>]> -->

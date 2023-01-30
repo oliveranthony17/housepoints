@@ -1,0 +1,32 @@
+<!-- Deleted all HTML in here as it drops in master.html file -->
+
+{% extends "master.html" %}
+
+{% block title %}
+  Students
+{% endblock %}
+
+{% block content %}
+
+  <h1>All Students</h1>
+
+  <ul class="content">
+    {% for x in students %}
+    <div class="house-points-card">
+      <div style="display: flex;">
+        <img src="{{ x.house.logo_url }}" class="house-logo"/>
+        <h3>{{ x.first_name }} {{ x.last_name }} <a href="/students/update_student/{{ x.id }}"><i class="fa-solid fa-pen-to-square edit-button"></i></a></h3>
+      </div>
+      <div style="display: flex;">
+        <h3 style="padding: 0 10px;"> {{ x.points }} points </h3>
+        <h3><a href="award_points/{{ x.id }}"> <i class="fa-regular fa-circle-plus"></i></a></h3>
+      </div>
+    </div>
+    {% endfor %}
+  </ul>
+
+  <div class="buttons">
+    <a class="btn" href="/students/create_student">Create Student</a>
+  </div>
+
+{% endblock %}

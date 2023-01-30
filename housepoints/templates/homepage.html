@@ -1,0 +1,35 @@
+<!-- Deleted all HTML in here as it drops in master.html file -->
+
+{% extends "master.html" %}
+
+{% block title %}
+  My School
+{% endblock %}
+
+{% block content %}
+
+  <h1>Current Points</h1>
+
+  <ul class="content">
+
+    {% for x in house_points %}
+
+        <div class="house-points-card">
+          <div style="display: flex;">
+            <img src="{{ x.logo_url }}" class="house-logo"/>
+            <h3>{{ x.name }}</h3>
+          </div>
+          <div class="house-points-card-points">
+            <h3>{{ x.points }} points</h3>
+          </div>
+        </div>
+
+    {% endfor %}
+  </ul>
+
+  <div class="buttons">
+    <a class="btn" href="/houses">View Houses</a>
+    <a class="btn" href="/students">View Students</a>
+  </div>
+
+{% endblock %}

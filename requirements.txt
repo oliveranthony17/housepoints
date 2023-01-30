@@ -1,0 +1,13 @@
+asgiref==3.6.0
+distlib==0.3.6
+dj-database-url==1.2.0
+Django==4.1.5
+django-fontawesome-5==1.0.18
+filelock==3.9.0
+fontawesomefree==6.2.1
+gunicorn==20.1.0
+platformdirs==2.6.2
+psycopg2-binary==2.9.5
+sqlparse==0.4.3
+virtualenv==20.17.1
+whitenoise==6.3.0

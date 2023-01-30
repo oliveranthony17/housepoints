@@ -1,0 +1,21 @@
+{% extends 'master.html' %}
+
+{% block title %}
+  Create House
+{% endblock %}
+
+{% block content %}
+
+<h1>Create House</h1>
+
+  <form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input class="btn-small" type="submit" name="Create House">
+  </form>
+
+  <div class="buttons">
+    <a class="btn" href="/houses">Back to Houses</a>
+  </div>
+
+{% endblock %}
