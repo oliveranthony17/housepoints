@@ -1,0 +1,23 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Summary
+{% endblock %}
+
+{% block content %}
+
+<div class="winner">
+  <h1>The winner is...</h1>
+  <h1>{{top_student.first_name}} {{top_student.last_name}}!</h1>
+  <h1>🎉🎉🎉</h1>
+</div>
+
+<div class="buttons">
+  <a class="btn" href="/students">Back to Students</a>
+</div>
+<hr>
+<div class="buttons">
+  <a class="btn" href="/students_clear_points">Clear all points</a>
+</div>
+
+{% endblock %}

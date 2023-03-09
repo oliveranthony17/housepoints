@@ -10,9 +10,12 @@
 
   <ul class="content">
     {% for x in houses %}
-    <div class="item-list" style="display: flex;">
-      <img src="{{ x.logo_url }}" class="house-logo"/>
-      <h3>{{ x.name }} <a href="update_house/{{ x.id }}"><i class="fa-solid fa-pen-to-square edit-button"></i></a></h3>
+    <div class="house-points-card">
+      <div style="display: flex;">
+        <img src="{{ x.logo_url }}" class="house-logo"/>
+        <h3>{{ x.name }} <a href="update_house/{{ x.id }}"><i class="fa-solid fa-pen-to-square edit-button"></i></a></h3>
+      </div>
+
     </div>
     {% endfor %}
   </ul>

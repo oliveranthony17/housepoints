@@ -19,12 +19,26 @@
       </div>
       <div style="display: flex;">
         <h3 style="padding: 0 10px;"> {{ x.points }} points </h3>
-        <h3><a href="award_points/{{ x.id }}"> <i class="fa-regular fa-circle-plus"></i></a></h3>
+        <h3><a href="/students/award_points/{{ x.id }}"> <i class="fa-regular fa-circle-plus"></i></a></h3>
       </div>
     </div>
     {% endfor %}
   </ul>
 
+  <div class="buttons">
+    <a class="btn" href="/summary">Declare Winner</a>
+    <a class="btn" href="/students_clear_points">Clear all points</a>
+  </div>
+  <hr>
+  <div class="buttons">
+    {% if request.path == '/students_sort_by_points/' %}
+      <a class="btn" href="/students">Sort by first name</a>
+    {% elif request.path == '/students/' %}
+      <a class="btn" href="/students_sort_by_points">Sort by points</a>
+    {% endif %}
+      <a class="btn" href="/students/students_award_all">Award all points</a>
+  </div>
+  <hr>
   <div class="buttons">
     <a class="btn" href="/students/create_student">Create Student</a>
   </div>

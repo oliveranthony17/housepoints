@@ -7,9 +7,17 @@
   <!-- Menu -->
   <nav class="nav">
       <ul class="menu">
+          <li><a href="/">Home</a></li>
+        {% if user.is_authenticated %}
+          <!-- <li><a href="/">Welcome, {{user.username}}</a></li> -->
           <li><a href="/houses">Houses</a></li>
           <li><a href="/students">Students</a> </li>
-          <!-- <li><a href="/admin">Admin</a></li> -->
+          <li><a href="/logout">Log out</a> </li>
+          <li><a href="/admin">Admin</a></li>
+          {% else %}
+          <li><a href="/register">Register</a> </li>
+          <li><a href="/login">Log in</a> </li>
+          {% endif %}
       </ul>
   </nav>
 </header>

@@ -6,13 +6,17 @@
 
 {% block content %}
 
+{% load crispy_forms_tags %}
+
   <h1>Create Student</h1>
 
-  <form action="" method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input class="btn-small" type="submit" name="Create Student">
-  </form>
+  <div class="mt-3">
+    <form action="" method="POST">
+      {% csrf_token %}
+      {{ form|crispy }}
+      <input class="btn-small" type="submit" name="Create Student">
+    </form>
+  </div>
 
   <div class="buttons">
     <a class="btn" href="/students">Back to Students</a>

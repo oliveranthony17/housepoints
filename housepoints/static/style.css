@@ -16,7 +16,7 @@ body h2 {
 }
 
 body h3 {
-  font-size: calc(1vw + 1vh + 1vmin);
+  font-size: calc(1vw + 1vh + 1vmin);v
 }
 
 a{
@@ -188,7 +188,7 @@ ul{
 .house-logo {
   width: 40px;
   height: 40px;
-  margin: 2px 12px 0px 10px;
+  margin: 5px 12px 2px 10px;
   border:1px solid grey;
 }
 
@@ -205,7 +205,9 @@ ul{
 
 .house-points-card h3 {
   padding: 0;
-  margin: 0;
+  /* margin: 0; */
+  align-items: center;
+  vertical-align: middle;
 }
 
 .house-points-card p {
@@ -218,27 +220,29 @@ ul{
   vertical-align: middle !important;
 }
 
-.item-list {
-  margin: 20px 0;
-}
-.item-list h3 {
-  margin: 0;
+.winner h1 {
+  text-align: center;
+  margin: 10px 0;
 }
 
 /* buttons */
 
 .buttons {
   align-items: center;
+  text-align: center;
   width: fit-content;
   margin: 30px auto;
 }
 
 .btn {
+  align-items: center;
+  text-align: center;
   color: #3C3C3C;
   background-color: #d9d9d9;
   font-size: calc(1vw + 1vh + 0.5vmin);
   font-weight: bold;
   height: 50px;
+  width: fit-content;
   border-radius: 360px;
   padding: 13px 20px 15px 20px !important;
   border-style: solid;
