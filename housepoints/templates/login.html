@@ -6,16 +6,14 @@
 
 {% block content %}
 
-{% load crispy_forms_tags %}
-
 <div class="container py-5">
   <h1>Login</h1>
   <form method="POST">
     {% csrf_token %}
-    {{ login_form|crispy }}
+    {{ login_form.as_p }}
     <button class="btn btn-primary" type="submit">Login</button>
   </form>
-  <p class="text-center">Don't have an account? <a href="/register">Create an account</a>.</p>
+  <p class="text-center">Don't have an account? <a style="text-decoration: underline" href="/register">Create one here</a>.</p>
 </div>
 
 {% endblock %}

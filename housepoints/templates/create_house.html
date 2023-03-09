@@ -6,13 +6,11 @@
 
 {% block content %}
 
-{% load crispy_forms_tags %}
-
 <h1>Create House</h1>
 
   <form action="" method="POST">
     {% csrf_token %}
-    {{ form|crispy }}
+    {{ form.as_p }}
     <input class="btn-small" type="submit" name="Create House">
   </form>
 

@@ -11,4 +11,4 @@ psycopg2-binary==2.9.5
 sqlparse==0.4.3
 virtualenv==20.17.1
 whitenoise==6.3.0
-django-crispy-forms==2.0.0
+# django-crispy-forms==2.0.0

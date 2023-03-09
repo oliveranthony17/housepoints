@@ -51,8 +51,6 @@ INSTALLED_APPS = [
     'fontawesomefree',
     'fontawesome_5',
     'whitenoise.runserver_nostatic',
-    # 'crispy_forms',
-    # 'crispy_bootstrap5',
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
