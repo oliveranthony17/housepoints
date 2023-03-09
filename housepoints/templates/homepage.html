@@ -15,11 +15,11 @@
     {% for x in house_points %}
 
         <div class="house-points-card">
-          <div style="display: flex;">
+          <div class="house-points-card-inner">
             <img src="{{ x.logo_url }}" class="house-logo"/>
             <h3>{{ x.name }}</h3>
           </div>
-          <div class="house-points-card-points">
+          <div class="house-points-card-inner">
             <h3>{{ x.points }} points</h3>
           </div>
         </div>

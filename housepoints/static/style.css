@@ -8,7 +8,7 @@ body {
 
 body h1 {
   font-size: calc(2vw + 2vh + 2vmin);
-  margin: 30px 0;
+  margin: 25px 0 25px 0;
 }
 
 body h2 {
@@ -36,7 +36,7 @@ ul{
 .container {
   padding-right: 15px;
   padding-left: 15px;
-  margin-top: 40px;
+  margin-top: 20px;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 200px;
@@ -65,7 +65,7 @@ ul{
   top: 0;
   width: 100%;
   height: auto;
-  vertical-align: middle;
+  vertical-align: middle !important;
   border-bottom:1px solid #3B3B3B;
 }
 
@@ -92,7 +92,7 @@ ul{
 
 .menu a{
   display: block;
-  padding: 20px 10px 10px 10px;
+  padding: 40px 10px 10px 10px;
   color: #3C3C3C;
 }
 .menu a:hover{
@@ -188,7 +188,7 @@ ul{
 .house-logo {
   width: 40px;
   height: 40px;
-  margin: 5px 12px 2px 10px;
+  margin: 5px 12px 5px 10px;
   border:1px solid grey;
 }
 
@@ -201,23 +201,25 @@ ul{
   justify-content: space-between;
   margin: 10px auto;
   vertical-align: middle;
+  align-items: center;
+  width: 100%;
 }
 
-.house-points-card h3 {
-  padding: 0;
-  /* margin: 0; */
-  align-items: center;
+.house-points-card-inner {
+  display: flex;
   vertical-align: middle;
+}
+
+.house-points-card-inner h3 {
+  align-self: center;
+  padding: 0;
+  margin: 0;
 }
 
 .house-points-card p {
-  padding: 10px 0;
+  /* padding: 10px 0; */
   margin: 0;
   vertical-align: middle;
-}
-
-.house-points-card-points {
-  vertical-align: middle !important;
 }
 
 .winner h1 {
@@ -235,17 +237,21 @@ ul{
 }
 
 .btn {
-  align-items: center;
-  text-align: center;
   color: #3C3C3C;
   background-color: #d9d9d9;
   font-size: calc(1vw + 1vh + 0.5vmin);
   font-weight: bold;
-  height: 60px;
-  /* height: calc(2vw + 2vh + 2vmin); */
-  width: fit-content;
+
+  height: 3rem;
+  width: 18rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+
   border-radius: 360px;
-  padding: 13px 20px 15px 20px !important;
+  padding: 10px !important;
   border-style: solid;
   border-width: thin;
   border-color:#d9d9d9;
