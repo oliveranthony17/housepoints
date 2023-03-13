@@ -24,3 +24,8 @@ I first built a prototype of the app using Figma - see screenshots below - in or
 This was an important step as it determined the way that the DB schema, routes and models were to be created.
 
 <img width="1680" alt="Screenshot 2023-03-09 at 14 21 26" src="https://user-images.githubusercontent.com/108479068/224035778-7e2816e0-6427-4310-9619-ae09ad79d8bf.png">
+
+__Here is the app in use:__
+
+![WhatsApp Image 2023-03-10 at 10 12 07](https://user-images.githubusercontent.com/108479068/224669433-7144d4a8-756a-4e37-b3e6-cc999f070c79.jpeg)
+
