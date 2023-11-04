@@ -8,12 +8,16 @@
 
 {% block content %}
 
+<form action="/students/students_award_selected" method="post" id="award-multiple-form">
+  {% csrf_token %}
+
   <h1>All Students</h1>
 
   <ul class="content">
     {% for x in students %}
     <div class="house-points-card">
       <div class="house-points-card-inner">
+        <input type="checkbox" id="{{ x.id }}" name="selected_students" value="{{ x.id }}">
         <img src="{{ x.house.logo_url }}" class="house-logo"/>
         <h3>{{ x.first_name }} {{ x.last_name }} <a href="/students/update_student/{{ x.id }}"><i class="fa-solid fa-pen-to-square edit-button"></i></a></h3>
       </div>
@@ -25,22 +29,29 @@
     {% endfor %}
   </ul>
 
+  <hr>
   <div class="buttons">
-    <a class="btn" href="/summary">Declare Winner</a>
+    <label for="custom-points">Award points:</label>
+    <input type="number" id="custom-points" name="custom-points" value="10">
+    <button type="submit" class="btn">Award selected</button>
+    <hr>
+    <a class="btn" href="/students/students_award_all">Award all students</a>
+  </div>
+  <hr>
+  <div class="buttons">
+    <a class="btn" href="/summary">Declare winner</a>
     <a class="btn" href="/students_clear_points">Clear all points</a>
   </div>
   <hr>
   <div class="buttons">
     {% if request.path == '/students_sort_by_points/' %}
-      <a class="btn" href="/students">Sort by first name</a>
+    <a class="btn" href="/students">Sort by first name</a>
     {% elif request.path == '/students/' %}
-      <a class="btn" href="/students_sort_by_points">Sort by points</a>
+    <a class="btn" href="/students_sort_by_points">Sort by points</a>
     {% endif %}
-      <a class="btn" href="/students/students_award_all">Award all points</a>
+    <a class="btn" href="/students/create_student">Create New Student</a>
   </div>
-  <hr>
-  <div class="buttons">
-    <a class="btn" href="/students/create_student">Create Student</a>
-  </div>
+
+</form>
 
 {% endblock %}

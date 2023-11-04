@@ -165,7 +165,6 @@ def studentsClearPoints(request):
     return redirect('/students')
 
 def studentsAwardAll(request):
-
     if request.method == "POST":
         form = AwardPointsForm(request.POST)
         students = Student.objects.filter(user = request.user)
@@ -181,6 +180,18 @@ def studentsAwardAll(request):
     form = AwardPointsForm(initial={'points': 10})
     context = {'form': form}
     return render(request, 'award_points.html', context)
+
+def studentsAwardSelected(request):
+    if request.method == "POST":
+        points = int(request.POST.get("custom-points"))
+        selected_student_ids = request.POST.getlist("selected_students")
+        selected_students = Student.objects.filter(id__in=selected_student_ids)
+
+        for student in selected_students:
+            student.points += points
+            student.save()
+
+    return redirect('/students/')
 
 def createStudent(request):
     if request.method == "POST":

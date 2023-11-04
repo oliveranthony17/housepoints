@@ -21,6 +21,7 @@ urlpatterns = [
     path('students_sort_by_points/', views.studentsSortByPoints, name='students_sort_by_points'),
     path('students_clear_points/', views.studentsClearPoints, name='students_clear_points'),
     path('students/students_award_all/', views.studentsAwardAll, name='students_award_all'),
+    path('students/students_award_selected', views.studentsAwardSelected, name='students_award_selected'),
     path('students/create_student', views.createStudent, name="create_student"),
 
     path('students/update_student/<int:id>', views.updateStudent, name='update_student'),
