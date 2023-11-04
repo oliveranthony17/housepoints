@@ -107,7 +107,7 @@ WSGI_APPLICATION = 'housepoints.wsgi.application'
 if IS_HEROKU:
     import dj_database_url
     db_from_env = dj_database_url.config(conn_max_age=500)
-    DATABASES['default'].update(db_from_env)
+    DATABASES['default'] = db_from_env
 else:
     DATABASES = {
         'default': {
