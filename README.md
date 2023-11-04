@@ -29,3 +29,11 @@ __Here is the app in use:__
 
 ![WhatsApp Image 2023-03-10 at 10 12 07](https://user-images.githubusercontent.com/108479068/224669433-7144d4a8-756a-4e37-b3e6-cc999f070c79.jpeg)
 
+__To run locally:__
+```
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python manage.py runservr
+```
+ 
